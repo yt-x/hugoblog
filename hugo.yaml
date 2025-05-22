@@ -1,0 +1,172 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: SGLDBHXS
+theme: ["PaperMod"]
+
+# 每页显示的条目数 5 个 post
+pagination:
+  pagerSize: 5
+
+
+# 启用robots.txt文件，有助于SEO
+enableRobotsTXT: true
+
+# 构建时不生成草稿、未发布和过期的内容
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+
+minify:
+  disableXML: true # 禁用 XML 压缩
+  minifyOutput: true # 最小化 HTML/CSS/JS 输出
+
+# 参数配置
+params:
+  # 生产环境下启用
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  # 标题
+  title: SGLDBHXS
+  # 描述
+  description: "SGLDBHXS'S BLOG"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: SGLDBHXS # author name
+  # author: ["Me", "You"] # multiple authors
+  # author image url (optional)
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  # 日期格式, 参考 https://golang.org/src/time/format.go 中的日期格式
+  DateFormat: "2006-01-02"
+  defaultTheme: auto # dark, light
+  # 是否禁用主题切换按钮
+  disableThemeToggle: false
+
+  # 展示阅读时间
+  ShowReadingTime: true
+  # 展示分享按钮
+  ShowShareButtons: true
+  # 展示文章导航链接
+  ShowPostNavLinks: true
+  # 展示文章底部的面包屑导航
+  ShowBreadCrumbs: true
+  # 代码复制按钮
+  ShowCodeCopyButtons: true
+  # 字数统计
+  ShowWordCount: true
+  # RSS 按钮
+  ShowRssButtonInSectionTermList: true
+  # 是否开启 Hugo 自动生成的目录（TOC）功能
+  # 参考 URL_ADDRESS  # 参考 https://gohugo.io/content-management/toc/
+  UseHugoToc: true
+  # 是否禁用首页第一篇文章的特殊样式
+  disableSpecial1stPost: false
+  # 是否禁用返回顶部按钮
+  disableScrollToTop: false
+  # 是否禁用评论
+  comments: false
+  # 是否元数据隐藏
+  hidemeta: false
+  # 是否隐藏文章摘要
+  hideSummary: false
+  # 是否禁用文章列表的 TOC
+  showtoc: false
+  # 目录是否默认展开状态
+  tocopen: false
+
+  # 资源配置 --- 替换为实际路径或绝对 URL
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/img/Young woman with headphones.svg"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  # 首页标签的文本、图标及图标高度
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode Profile 模式的配置
+  profileMode:
+    # 是否启用 Profile 模式
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode  主页信息
+  homeInfoParams:
+    Title: "Hi Dear Friend \U0001F44B"
+    Content: Welcome to SGLDBHXS's blog.
+
+  socialIcons:
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/21336871/kkk-su"
+    - name: github
+      url: "https://github.com/yt-x"
+
+  # 分析工具
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  # 封面图配置 --- 控制封面图的显示位置
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: example.org
+      url: https://example.org
+      weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai

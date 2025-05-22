@@ -113,6 +113,10 @@ params:
       url: "https://stackoverflow.com/users/21336871/kkk-su"
     - name: github
       url: "https://github.com/yt-x"
+    - name: bilibili
+      url: "https://space.bilibili.com/474791264"
+    - name: telegram
+      url: "https://t.me/Sgldbhxs"
 
   # 分析工具
   analytics:

@@ -5,7 +5,7 @@ date: "2025-05-22T11:45:05+08:00"
 tags: ["Blog"]
 author: "SGLDBHXS"
 showToc: true
-TocOpen: false
+TocOpen: true
 UseHugoToc: true
 
 draft: false

@@ -1,0 +1,187 @@
+# 基础配置
+baseURL: http://localhost:1313/
+languageCode: zh-cn
+title: SGLDBHXS
+theme: ["PaperMod"]
+
+# 分页配置
+pagination:
+  pagerSize: 5
+
+# 构建和 SEO 配置
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# 压缩优化
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# 输出格式配置
+outputs:
+  home:
+    - HTML      # 生成 HTML 首页
+    - RSS       # 生成 RSS 订阅源（/index.xml）
+    - JSON      # 生成 JSON（/index.json，搜索功能必需！）
+
+# 菜单配置
+menu:
+  main:
+    - identifier: categories  # 唯一标识符（不重复即可）
+      name: 分类
+      url: /categories/
+      weight: 10
+
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 30
+
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 50
+# 对应关系：
+# /categories/ → 自动生成（所有分类列表）
+# /tags/ → 自动生成（所有标签列表）
+# /archives/ → content/archives.md
+# /search/ → content/search.md
+# /about/ → 需要创建 content/about.md
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+
+
+# params 参数（PaperMod 主题专用）
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: SGLDBHXS
+  description: "SGLDBHXS'S BLOG"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: SGLDBHXS
+  images: ["/images/girl.jpg"]
+  DateFormat: "2006-01-02"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  # 网站图标
+  # 文件位置：static/ 目录下
+  assets:
+    favicon: "/images/frown32.png"
+    favicon16x16: "/images/frown16.png"
+    favicon32x32: "/images/frown32.png"
+    apple_touch_icon: ""
+    safari_pinned_tab: ""
+
+  # 网站标签（左上角）
+  label:
+    text: "Home"
+    icon: /images/girl.png
+    iconHeight: 35
+
+  # 首页模式 1：Profile Mode
+  profileMode:
+    enabled: true
+    title: "还未曾去过倒悬山"  # 配置归档页面的标题
+    subtitle: "Look here"
+    imageUrl: "/images/avatar.png"
+    imageTitle: ''
+    imageWidth: 120
+    imageHeight: 120
+
+    buttons:
+      - name: 文章
+        url: posts
+      - name: 归档
+        url: "/archives"
+      - name: 标签
+        url: tags
+
+  # home-info mode  主页信息
+  homeInfoParams:
+    Title: "Hi Dear Friend 👋"
+    Content: Welcome to SGLDBHXS's blog.
+
+  socialIcons:
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/21336871/kkk-su"
+    - name: github
+      url: "https://github.com/yt-x"
+    - name: bilibili
+      url: "https://space.bilibili.com/474791264"
+    - name: telegram
+      url: "https://t.me/Sgldbhxs"
+    - name: rss
+      url: "/index.xml"
+
+  # 分析工具
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  # 封面图配置
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+  # 编辑链接
+  editPost:
+    URL: "https://github.com/yt-x/hugoblog/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  # 搜索配置
+  
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    # 搜索字段：标题、链接、摘要、正文内容
+    keys: ["title", "permalink", "summary", "content"]
+
+
+
+# 代码高亮配置
+pygmentsUseClasses: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+  highlight:
+    noClasses: false
+    lineNos: true
+    style: monokai

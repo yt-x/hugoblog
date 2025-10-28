@@ -1,0 +1,36 @@
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- 霞鹜文楷字体 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=LXGW+WenKai+TC&display=swap">
+
+
+<!-- 自定义 CSS -->
+<link rel="stylesheet" href="{{ `css/extended/custom.css` | absURL }}">
+
+<!-- 自定义 JavaScript -->
+<script src="{{ `js/custom.js` | absURL }}" defer></script>
+
+<!-- 网站验证 -->
+{{- if site.Params.analytics.google.SiteVerificationTag }}
+<meta name="google-site-verification" content="{{ site.Params.analytics.google.SiteVerificationTag }}">
+{{- end }}
+
+<!-- 自定义 meta 标签 -->
+<meta name="author" content="{{ site.Params.author }}">
+
+<style>
+/* 自定义字体应用 */
+body {
+    font-family: 'LXGW WenKai TC', 'Noto Sans SC', -apple-system, BlinkMacSystemFont,
+                'Segoe UI', sans-serif;
+}
+
+code, pre {
+    font-family: 'JetBrains Mono', 'Consolas', monospace !important;
+}
+</style>

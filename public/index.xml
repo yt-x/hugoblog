@@ -6,11 +6,11 @@
     <description>Recent content on SGLDBHXS</description>
     <image>
       <title>SGLDBHXS</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/images/girl.jpg</url>
+      <link>http://localhost:1313/images/girl.jpg</link>
     </image>
-    <generator>Hugo -- 0.147.3</generator>
-    <language>en-us</language>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
     <lastBuildDate>Thu, 22 May 2025 11:45:05 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -19,6 +19,26 @@
       <pubDate>Thu, 22 May 2025 11:45:05 +0800</pubDate>
       <guid>http://localhost:1313/posts/first-try/</guid>
       <description>Test Blog</description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;-你好&#34;&gt;👋 你好&lt;/h2&gt;
+&lt;p&gt;我是 SGLDBHXS，一名&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;-技能&#34;&gt;🔧 技能&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;编程语言&lt;/strong&gt;：Python, JavaScript, Go&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;框架&lt;/strong&gt;：React, Vue, Django&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：Git, Docker, VS Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-联系方式&#34;&gt;📫 联系方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:your@email.com&#34;&gt;your@email.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/yt-x&#34;&gt;@yt-x&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Telegram: &lt;a href=&#34;https://t.me/Sgldbhxs&#34;&gt;@Sgldbhxs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

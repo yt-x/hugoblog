@@ -1,0 +1,17 @@
+# 生产环境配置
+baseURL: https://sgldbhxs.top/hugoblog/
+
+params:
+  # 生产环境图片路径（带子路径）
+  images: ["/hugoblog/images/girl.jpg"]
+
+  assets:
+    favicon: "/hugoblog/images/frown32.png"
+    favicon16x16: "/hugoblog/images/frown16.png"
+    favicon32x32: "/hugoblog/images/frown32.png"
+
+  label:
+    icon: /hugoblog/images/girl.png
+
+  profileMode:
+    imageUrl: "/hugoblog/images/avatar.png"

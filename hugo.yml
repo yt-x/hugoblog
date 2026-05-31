@@ -1,5 +1,5 @@
 # 基础配置
-baseURL: http://localhost:1313/
+baseURL: https://sgldbhxs.top/hugoblog/
 languageCode: zh-cn
 title: SGLDBHXS
 theme: ["PaperMod"]
@@ -25,7 +25,10 @@ outputs:
     - HTML      # 生成 HTML 首页
     - RSS       # 生成 RSS 订阅源（/index.xml）
     - JSON      # 生成 JSON（/index.json，搜索功能必需！）
-
+  section:        # ← 新增这 4 行
+    - HTML
+    - RSS
+    - JSON
 # 菜单配置
 menu:
   main:

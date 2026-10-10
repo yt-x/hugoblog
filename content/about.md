@@ -8,7 +8,7 @@ comments: false
 
 ## 👋 你好
 
-我是 SGLDBHXS，一名...
+<!-- 自我介绍待填 -->
 
 ## 🔧 技能
 
@@ -18,6 +18,6 @@ comments: false
 
 ## 📫 联系方式
 
-- Email: your@email.com
+- Email: xytcsust2019@163.com
 - GitHub: [@yt-x](https://github.com/yt-x)
 - Telegram: [@Sgldbhxs](https://t.me/Sgldbhxs)

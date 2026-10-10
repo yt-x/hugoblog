@@ -1,0 +1,24 @@
+# 统一换行符：入库与检出都用 LF，避免在 Windows 上反复出现
+# "LF will be replaced by CRLF" 警告，也避免同一文件在不同机器上产生无意义 diff。
+* text=auto eol=lf
+
+# 二进制文件明确排除，不参与换行符转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# 文本类明确标注
+*.md text
+*.yml text
+*.yaml text
+*.html text
+*.css text
+*.js text
+*.json text
+*.svg text
+*.py text
+*.sh text

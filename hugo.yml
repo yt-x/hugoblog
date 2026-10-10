@@ -104,7 +104,7 @@ params:
 
   # 网站标签（左上角）
   label:
-    text: "Home"
+    text: ""                 # 待填：顶栏品牌文字；留空则顶栏只显示图标
     icon: /images/girl.png
     iconHeight: 35
 
@@ -112,7 +112,7 @@ params:
   profileMode:
     enabled: true
     title: "还未曾去过倒悬山"  # 配置归档页面的标题
-    subtitle: "Look here"
+    subtitle: ""             # 待填：首页副标题
     imageUrl: "/images/avatar.png"
     imageTitle: ''
     imageWidth: 120

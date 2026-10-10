@@ -13,7 +13,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Test Blog"
-canonicalURL: "https://canonical.url/to/page"
 
 disableShare: false
 disableHLJS: false

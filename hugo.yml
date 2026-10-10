@@ -1,6 +1,7 @@
 # 基础配置
 baseURL: https://sgldbhxs.top/hugoblog/
 languageCode: zh-cn
+defaultContentLanguage: zh   # 决定 <html lang> 与主题界面文案（主题自带 zh.yaml），留空会退回 en
 title: SGLDBHXS
 theme: ["PaperMod"]
 
@@ -159,7 +160,7 @@ params:
   # 编辑链接
   editPost:
     URL: "https://github.com/yt-x/hugoblog/tree/main/content"
-    Text: "Suggest Changes"
+    Text: "建议修改"
     appendFilePath: true
 
   # 搜索配置

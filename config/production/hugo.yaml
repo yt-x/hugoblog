@@ -3,7 +3,7 @@ baseURL: https://sgldbhxs.top/hugoblog/
 
 params:
   # 生产环境图片路径（带子路径）
-  images: ["/hugoblog/images/girl.jpg"]
+  images: ["/hugoblog/images/girl.png"]
 
   assets:
     favicon: "/hugoblog/images/frown32.png"

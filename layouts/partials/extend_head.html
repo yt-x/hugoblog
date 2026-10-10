@@ -9,11 +9,13 @@
 <link rel="stylesheet" href="https://fonts.loli.net/css2?family=LXGW+WenKai+TC&display=swap">
 
 
-<!-- 自定义 CSS -->
-<link rel="stylesheet" href="{{ `css/extended/custom.css` | absURL }}">
+<!-- 自定义 CSS 无需在此引入：主题 head.html 已用 resources.Match "css/extended/*.css"
+     把 assets/css/extended/ 下的文件打进主样式包，手写 link 只会产生一个 404。 -->
 
-<!-- 自定义 JavaScript -->
-<script src="{{ `js/custom.js` | absURL }}" defer></script>
+<!-- 自定义 JavaScript：走 Hugo 资源管线取 assets/js/custom.js，产出带指纹的地址 -->
+{{- with resources.Get "js/custom.js" }}
+<script src="{{ (. | minify | fingerprint).RelPermalink }}" defer></script>
+{{- end }}
 
 <!-- 网站验证 -->
 {{- if site.Params.analytics.google.SiteVerificationTag }}

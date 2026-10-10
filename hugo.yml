@@ -72,7 +72,7 @@ params:
   description: "SGLDBHXS'S BLOG"
   keywords: [Blog, Portfolio, PaperMod]
   author: SGLDBHXS
-  images: ["/images/girl.jpg"]
+  images: ["/images/girl.png"]
   DateFormat: "2006-01-02"
   defaultTheme: auto
   disableThemeToggle: false

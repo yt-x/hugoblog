@@ -28,6 +28,7 @@ hugo --environment production --minify \
 2. **主题只有 home 的 JSON 模板**（`themes/PaperMod/layouts/_default/index.json`，用途是站内搜索索引），**没有 section 的 JSON 模板**。section 的 JSON 由项目层 `layouts/posts/list.json.json` 提供，删掉它线上 `/posts/index.json` 立刻回到 404，个人主页博客卡会先吃一次 404 再回退 RSS。取舍因果见 `decisions/`。
 3. **子模块必须先检出**：`themes/PaperMod` 为空时本地构建会报一串 `found no layout file for "html"`，产出里没有任何页面。本机初始化方式见上层环境坑 2。
 4. **CI 会覆盖 baseURL**：workflow 用 `--baseURL "${{ steps.pages.outputs.base_url }}/"`，取值含 `/hugoblog` 子路径；`config/production/hugo.yaml` 里的绝对图片路径前缀必须与之匹配，否则线上图片 404。
+5. **样式与脚本的落地方式不一样**：`assets/css/extended/*.css` 由主题 `head.html` 用 `resources.Match` 自动打进主样式包，**不要另写 `<link>`**（会 404 且重复应用）；`assets/js/*.js` 不在打包范围，必须在 `layouts/partials/extend_head.html` 里用 `resources.Get | minify | fingerprint` 取地址，手写固定路径会 404。图标类文件放 `static/` 根目录——主题在 params 留空时会回退到 `apple-touch-icon.png`、`safari-pinned-tab.svg`、`favicon.ico` 这些根路径默认值，缺文件就是线上 404。
 
 ## 禁忌
 

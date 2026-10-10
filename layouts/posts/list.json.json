@@ -1,0 +1,23 @@
+{{- /*
+  /posts/index.json —— section 的 JSON 列表输出，供个人主页（HomePage）的博客卡读取。
+
+  为什么需要它：
+  PaperMod 主题只提供 home 的 JSON 模板（themes/PaperMod/layouts/index.json，用途是站内搜索索引），
+  没有为 section 提供 JSON 模板。于是 hugo.yml 里 outputs.section 配了 JSON 也不会有文件产出，
+  /hugoblog/posts/index.json 恒为 404 —— 主页 main.js 会先吃到一次 404 网络错误再回退到 RSS。
+
+  字段与 HomePage/js/main.js 的 fetchLatestPost() 对齐（JSON 分支读 data[0].title / .permalink / .date / .summary）。
+  额外提供 content 与主题的搜索索引保持一致的字段风格。
+  按 Date 倒序，保证 data[0] 恒为最新一篇。
+*/ -}}
+{{- $pages := sort .RegularPages "Date" "desc" -}}
+{{- $list := slice -}}
+{{- range $pages -}}
+  {{- $list = $list | append (dict
+      "title" .Title
+      "content" .Plain
+      "permalink" .Permalink
+      "date" (.Date.Format "2006-01-02T15:04:05-07:00")
+      "summary" .Summary) -}}
+{{- end -}}
+{{- $list | jsonify -}}

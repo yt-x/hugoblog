@@ -8,17 +8,16 @@ showToc: true
 TocOpen: false
 UseHugoToc: true
 
-draft: false
+draft: true
 
 hidemeta: false
 comments: false
-description: "Test Blog"
-canonicalURL: "https://canonical.url/to/page"
+description: ""
 
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 
 ShowReadingTime: true
 ShowBreadCrumbs: true

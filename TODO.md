@@ -11,10 +11,11 @@
 | RSS feed | 完成 | `hugo.yml` |
 | Pages 自动部署 | 完成 | `.github/workflows/hugo.yaml` |
 | 仓库卫生 | 完成 | `.gitignore` |
-| README | 完成 | `README.md` |
+| README（含写作与发布流程） | 完成 | `README.md` |
 | 对外引用修正 | 完成 | `layouts/partials/extend_head.html` |
 | 历史文档清理 | 完成 | `AGENTS.md` |
 | 界面语言本地化 | 完成 | `hugo.yml` |
+| 搜索能搜到文章 | 完成 | `content/posts/first-try.md` |
 | 关于页与首页文案 | 未开始 | |
 | 顶栏品牌文字 | 未开始 | |
 | 导航回主站 | 未开始 | |
@@ -23,12 +24,15 @@
 
 ## 当前状态
 
-- 线上 `https://sgldbhxs.top/hugoblog/`；没有自己的 CNAME，靠用户站自定义域名下沉路由。
+- 线上 `https://sgldbhxs.top/hugoblog/`；无自己的 CNAME，靠用户站下沉路由。
 - Hugo 0.147.3（CI 固定）+ PaperMod（submodule 钉 `1cf5327`）；配置两层合并。
-- 跟踪文件 109 → 45：`public/` 与 `.hugo_build.lock` 出库，`questions/` 的 9 篇已删。
+- 跟踪文件 109 → 45（`public/` 与 `.hugo_build.lock` 出库，`questions/` 9 篇删除）。
 - 界面已中文化：`defaultContentLanguage: zh` 带出「主页 / 文章 / 分钟 / 字 / 目录 / 建议修改」。
+- 搜索此前搜不到文章：`first-try.md` 带 `searchHidden: true` 会被搜索索引跳过；已修正，索引现有「First Try」与「关于我」。
+- `archetypes/post.md` 已清掉假 `canonicalURL`、`draft: false`、`searchHidden: true` 与占位 description。
+- 写作到发布全流程已写进 `README.md`（新建 → 插图 → 预览 → 是否上线 → 推送）。
 - 仍是英文或占位符的读者可见文字：顶栏 `Home`、首页副标题 `Look here`、关于页的 `your@email.com` 与「一名…」。
-- 唯一文章 `first-try.md` 没有正文，列表与详情都显示「0 分钟 / 0 字」；已知 404 只剩 `safari-pinned-tab.svg`（搁置）。
+- 唯一文章没有正文，显示「0 分钟 / 0 字」；已知 404 只剩 `safari-pinned-tab.svg`（搁置）。
 
 ## 下一步
 

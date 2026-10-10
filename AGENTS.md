@@ -29,6 +29,7 @@ hugo --environment production --minify \
 3. **子模块必须先检出**：`themes/PaperMod` 为空时本地构建会报一串 `found no layout file for "html"`，产出里没有任何页面。本机初始化方式见上层环境坑 2。
 4. **CI 会覆盖 baseURL**：workflow 用 `--baseURL "${{ steps.pages.outputs.base_url }}/"`，取值含 `/hugoblog` 子路径；`config/production/hugo.yaml` 里的绝对图片路径前缀必须与之匹配，否则线上图片 404。
 5. **样式与脚本的落地方式不一样**：`assets/css/extended/*.css` 由主题 `head.html` 用 `resources.Match` 自动打进主样式包，**不要另写 `<link>`**（会 404 且重复应用）；`assets/js/*.js` 不在打包范围，必须在 `layouts/partials/extend_head.html` 里用 `resources.Get | minify | fingerprint` 取地址，手写固定路径会 404。图标类文件放 `static/` 根目录——主题在 params 留空时会回退到 `apple-touch-icon.png`、`safari-pinned-tab.svg`、`favicon.ico` 这些根路径默认值，缺文件就是线上 404。
+6. **内容与写作**：本仓库没有 `CONSTRAINTS.md`，作者视角的机制与坑集中在 `README.md` 的「写作与发布」「常见问题」两节，改内容相关的东西前先看那里。要点：`hugo new content posts/x.md` 命中的是 `archetypes/default.md`，带全套字段的 `archetypes/post.md` 只在显式 `--kind post` 时生效；正文图片必须走页面包或 `canonifyURLs`，因为整站在 `/hugoblog/` 子路径而开发在根路径；`draft: true` 与写在未来的 `date` 都不会上线且不报错；`searchHidden: true` 会让文章进不了搜索索引。
 
 ## 禁忌
 

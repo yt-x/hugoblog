@@ -17,7 +17,7 @@ description: "Test Blog"
 disableShare: false
 disableHLJS: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 
 ShowReadingTime: true
 ShowBreadCrumbs: true

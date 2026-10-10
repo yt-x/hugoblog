@@ -29,7 +29,7 @@
 - 跟踪文件 109 → 46（`public/` 与 `.hugo_build.lock` 出库，`questions/` 9 篇删除）。
 - 界面已中文化：`defaultContentLanguage: zh` 带出「主页 / 文章 / 分钟 / 字 / 目录 / 建议修改」。
 - 搜索此前搜不到文章：`first-try.md` 带 `searchHidden: true` 会被搜索索引跳过；已修正，索引现有「First Try」与「关于我」。
-- `archetypes/post.md` 已清掉假 `canonicalURL`、`draft: false`、`searchHidden: true` 与占位 description。
+- 模板只剩 `archetypes/default.md`（title/date/draft/tags/description）；只有 `--kind post` 才命中的 `post.md` 已删除（其 21 个字段里 12 个与全局 params 同值）。
 - 写作到发布全流程已写进 `README.md`（新建 → 插图 → 预览 → 是否上线 → 推送）。
 - 仍是英文或占位符的读者可见文字：顶栏 `Home`、首页副标题 `Look here`、关于页的 `your@email.com` 与「一名…」。
 - 唯一文章没有正文，显示「0 分钟 / 0 字」；已知 404 只剩 `safari-pinned-tab.svg`（搁置）。

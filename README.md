@@ -13,11 +13,21 @@
 hugo new content posts/我的文章.md
 ```
 
-生成的文件由 `archetypes/default.md` 渲染，只有 `title` / `date` / `draft: true` 三个字段。
+生成的文件带这几个字段，按需填：
 
-Hugo 是按 section 名找模板的：这条命令找的是 `archetypes/posts.md`，找不到才回退到 `default.md`。
-仓库里的 `archetypes/post.md` 带全套 PaperMod 字段，但**不会被上面这条命令命中**，
-只有显式 `hugo new content posts/我的文章.md --kind post` 时才会用到它。
+| 字段 | 说明 |
+| --- | --- |
+| `title` | 标题，默认由文件名生成（`my-post` → `My Post`） |
+| `date` | 时间；**不要写未来时间**，见第 4 步 |
+| `draft` | `true` 是草稿，不会上线 |
+| `tags` | 标签；不填就不会进标签页 |
+| `description` | 摘要，用于分享卡片与搜索引擎；留空会回落到正文开头 |
+
+模板只有 `archetypes/default.md` 一个：Hugo 是按 kind 找 `archetypes/<kind>.md` 的，`posts/x.md`
+的 kind 是 section 名 `posts`，找不到同名模板就回退 `default.md`，所以它覆盖全部新建文章。
+
+其余 PaperMod 开关（目录、阅读时长、分享按钮、字数、面包屑等）已在 `hugo.yml` 的 `params` 里统一设好，
+单篇需要覆盖时再往 front matter 里加；封面用 `cover.image`，写法见第 2 步。
 
 ### 2. 写正文与插图
 

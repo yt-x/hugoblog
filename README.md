@@ -32,6 +32,16 @@ Hugo 是按 section 名找模板的：这条命令找的是 `archetypes/posts.md
 
 原因是站点在 `/hugoblog/` 子路径下，而开发环境在根路径：根绝对路径只在开发下是对的。
 
+默认配置没有开 `canonifyURLs`，所以上表第三行就是现状。要不要开它，实测有两条代价：
+
+- **影响面不是局部的**：开启后 46 个产物里有 15 个会变（所有页面 HTML、RSS、JSON feed、
+  `sitemap.xml`、搜索索引），是一次全站 URL 重写。
+- **把域名写进正文产物**：输出变成 `https://sgldbhxs.top/hugoblog/images/x.png`；将来换域名
+  （比如迁到 VPS）时这些地址都要重新生成。页面包输出的是 `/hugoblog/posts/x/photo.png`，
+  根相对、不含域名，换域名不用动内容。
+
+所以默认走页面包；只有图片要被多篇文章共用、必须集中放 `static/images/` 时，才值得开它。
+
 **推荐页面包**，零配置且开发/线上一致：
 
 ```text

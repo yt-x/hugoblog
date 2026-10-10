@@ -26,7 +26,7 @@
 
 - 线上 `https://sgldbhxs.top/hugoblog/`；无自己的 CNAME，靠用户站下沉路由。
 - Hugo 0.147.3（CI 固定）+ PaperMod（submodule 钉 `1cf5327`）；配置两层合并。
-- 跟踪文件 109 → 45（`public/` 与 `.hugo_build.lock` 出库，`questions/` 9 篇删除）。
+- 跟踪文件 109 → 46（`public/` 与 `.hugo_build.lock` 出库，`questions/` 9 篇删除）。
 - 界面已中文化：`defaultContentLanguage: zh` 带出「主页 / 文章 / 分钟 / 字 / 目录 / 建议修改」。
 - 搜索此前搜不到文章：`first-try.md` 带 `searchHidden: true` 会被搜索索引跳过；已修正，索引现有「First Try」与「关于我」。
 - `archetypes/post.md` 已清掉假 `canonicalURL`、`draft: false`、`searchHidden: true` 与占位 description。
